@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Home View</title>
+<link rel="stylesheet" href="stylesheets/homeAdminStyle.css" >
+<link rel="stylesheet" href="/stylesheets/generalAdminStyle.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" >
+</head>
+<body>
+
+
+    
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+
+    <img src="images/homeImg/bg.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+    <img src="images/homeImg/Picture12.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+    <img src="images/homeImg/slide 3.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+</div>
+<br>
+    
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+<div class="navigationBar">
+    <a href="/contactUs"><i class= "fa fa-calendar-check-o "></i> Reach Out</a>
+    <a href="/aboutUs"><i class= "fa fa-info-circle"></i> About Us</a>
+    <a href="/donation"><i class= "far fa-heart"></i> Give</a>
+    <div class="navDropDown">
+        <button class="navdropbtn">Events
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navdropdown-content">
+        <a href="/event">Annual Events</a>
+        <a href="/booking">Theater</a>
+        <a href="/event">Masses</a>
+        </div>
+    </div>
+    <a href="/"><i class="fa fa-home fa-2xl"></i></a>
+    <a  href="/competitionsHome">Competetions <i class="fas fa-dice"></i></a>
+    <a href="/wedding">Book a Wedding  <i class="fa fa-group"></i></a>
+    <!-- <a class="loginButton"> <button class="center" id = "show-login" ><i> Login</i></button></a> -->
+    <a href="/homeAdmin.html"><i class="fa fa-home"></i></a>
+    <div class="navUserSign">
+      <button class="navdropUserSign">
+          <i class="fas fa-user"></i>
+      </button>
+      <div class="navdropdown-content">
+      <a href="/deletecookie">Sign Out</a>
+      </div>
+    </div>
+  
+  </div>
+
+
+
+
+
+    <h1 style="margin:6% 0% 0% 2% ;">Members Information</h1>
+
+    <a href="/signUp"><button class="button" style="margin:3% 1.5% 3% 6% ;background-color: #04AA6D;">Sign Up for a New Member</button></a>
+    <button class="button" style="margin:3% 1.5% 3% 3% ; background-color: #04AA6D;">View All Members</button>
+
+
+    <h1 style="margin:6% 0% 0% 2% ;">Modify Pages</h1>
+
+    <button class="button" style="margin:3% 1.5% 3% 6% ;background-color: #04AA6D;">Reach Out</button>
+    <button class="button" style="margin:3% 1.5% 3% 3% ;background-color: #04AA6D;">About Us</button>
+    <button class="button" style="margin:3% 1.5% 3% 3% ;background-color: #04AA6D;">Donations</button>
+    <a href="/eventMaker"><button class="button" style="margin:3% 1.5% 3% 3% ;background-color: #04AA6D;">Events</button></a>
+    <a href="/competitionMaker"><button class="button" style="margin:3% 1.5% 3% 3% ;background-color: #04AA6D;">Competitions</button></a>
+    <a href="/weddingAdmin"><button class="button" style="margin:3% 1.5% 3% 3% ;background-color: #04AA6D;">Weddings</button></a>
+
+
+<div class="fixedFooter">
+<div class="fixedFooterIcons">
+    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fa-xl" style="padding:20px"></i></a>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f fa-xl" style="padding:20px"></i></a>
+    <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-xl" style="padding:20px"></i></a>
+    <a href="https://www.google.com/"  target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play fa-xl" style="padding:20px"></i></a>
+</div>
+</div>
+
+
+<div class="footer">
+<div class="footerIcons">
+    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fa-2xl" style="padding:20px"></i></a>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f fa-2xl" style="padding:20px"></i></a>
+    <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-2xl" style="padding:20px"></i></a>
+    <a href="https://www.google.com/"  target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play fa-2xl" style="padding:20px"></i></a>
+</div>
+
+<div class="footerLeft">
+    <a class = "footerTitle"> CONTACT</a>
+    <br>
+    <br>
+    <a><i class="fas fa-phone-square-alt" style="padding:10px"></i> 12345</a>
+    <br>
+    <a><i class="fas fa-envelope-square" style="padding:10px"></i> kenesty@cairo.org.eg</a>
+</div>
+
+<div class="footerRight">
+    <a class = "footerTitle"> LOCATION</a>
+    <br>
+    <br>
+    <a><i class="fas fa-map-marker-alt" style="padding:10px"></i> 123, XYZ Road ASU</a>
+    <br>
+    <a> Cairo, EGYPT</a>
+</div>
+
+<div class="footerText">
+    <a href="/"><i  style="padding:10px"></i> Home</a>
+    <a href="index.html#services" ><i  style="padding:10px"></i>Services</a>
+    <a><i  style="padding:10px"></i>About</a>
+    <a><i  style="padding:10px"></i>Privacy Policy</a>
+</div>
+
+<div class="copyright"> <a><i class="far fa-copyright" style="padding:2px"></i></a>2022 ASU Engineers | All Rights Reserved</div>
+
+
+</div>
+
+
+</body>
+</html>

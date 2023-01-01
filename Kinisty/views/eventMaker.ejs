@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/generalAdminStyle.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" >    
+<title>Event Maker</title>
+</head>
+<body>
+    <div class="navigationBar">
+        <a href="/contactUs"><i class= "fa fa-calendar-check-o "></i> Reach Out</a>
+        <a href="/aboutUs"><i class= "fa fa-info-circle"></i> About Us</a>
+        <a href="/donation"><i class= "far fa-heart"></i> Give</a>
+        <div class="navDropDown">
+            <button class="navdropbtn">Events
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="navdropdown-content">
+            <a href="/event">Annual Events</a>
+            <a href="/booking">Theater</a>
+            <a href="/event">Masses</a>
+            </div>
+        </div>
+        <a href="/"><i class="fa fa-home fa-2xl"></i></a>
+        <a  href="/competitionsHome">Competetions <i class="fas fa-dice"></i></a>
+        <a href="/wedding">Book a Wedding  <i class="fa fa-group"></i></a>
+        <a href="/homeAdmin"><i class="fa fa-home"></i></a>
+        <div class="navUserSign">
+        <button class="navdropUserSign">
+            <i class="fas fa-user"></i>
+        </button>
+        <div class="navdropdown-content">
+        <a href="/deletecookie">Sign Out</a>
+        </div>
+    </div>
+    
+    </div>
+<h2 class="pageTitle">Events</h2>
+    <form action="/newEvent" method="post">
+        <div class="parent" style="top: 110%;">
+            <h1>
+                New Event &#128221;
+            </h1>
+            <hr class="solid" width="610px" >
+                <fieldset style="width: 600px">
+                    <legend>
+                        <h2>
+                            Personal Data for Organizer
+                        </h2>
+                    </legend>
+                    <label for="organizerName">Name</label>
+                    <input required type="text" id="organizerName" name="organizerName" placeholder="Enter Organizer's Name">
+                    <br>
+                    <label for="organizerEmail">E-mail</label>
+                    <input required type="email" id="organizerEmail" name="organizerEmail" placeholder="Organizer's e-mail" >
+                    <br>
+                    <label for="organizerPhoneNumber">phoneNumber</label>
+                    <input type="text" id="organizerPhoneNumber" name="organizerPhoneNumber" placeholder="Organizer's phoneNumber">
+                    <br>         
+                    <label for="organizerDateOfBirth">Date of birth</label>
+                    <input type="date" id="organizerDateOfBirth" name="organizerDateOfBirth" min="3" max="70">
+                    <br>
+                    <section class="gender">
+                        <label for="c1" >Male</label>
+                        <input type="radio" id="c1" name="organizerGender" value="Male" >
+                        <br>
+                        <label for="c2" >Female</label>
+                        <input type="radio" id="c2" name="organizerGender" value="Female">
+                        </section>
+                    <hr class="solid">
+                    
+                    <legend>
+                        <h3>
+                            Event Info
+                        </h3>
+                    </legend>
+
+                    <label for="eventName">Event Name</label>
+                    <input required type="text" id="eventName" name="eventName" placeholder="Enter eventName" >
+                    <br>
+                    <label for="eventDescription"> Event Description</label>
+                    <input required type="text" id="eventDescription" name="eventDescription" placeholder="Enter eventDescription">
+                    <br>
+                    <label for="eventDate">Event Date</label>
+                    <input required type="date" id="eventDate" name="eventDate" placeholder="Event Date">
+                    <br>
+                    <label for="eventStartHour">Event Start Hour</label>
+                    <input required type="text" id="eventStartHour" name="eventStartHour" placeholder="Event Start Hour">
+                    <br>
+                    <label for="eventEndHour">Event End Hour</label>
+                    <input required type="text" id="eventEndHour" name="eventEndHour" placeholder="Event End Hour">
+                    <br>
+                    <label for="ticketPriceForFirstSection">Ticket Price For First Section</label>
+                    <input required type="number" min="0" id="ticketPriceForFirstSection" name="ticketPriceForFirstSection" placeholder= "Ticket Price For First Section">
+                    <br>
+                    <label for="ticketPriceForMediumSection">Ticket Price For Medium Section</label>
+                    <input required type="number" min="0" id="ticketPriceForMediumSection" name="ticketPriceForMediumSection" placeholder="ticket Price For Medium Section">
+                    <br>
+                    <label for="ticketPriceForLastSection">ticket Price For Last Section</label>
+                    <input required type="number" min="0" id="ticketPriceForLastSection" name="ticketPriceForLastSection" placeholder="Ticket Price For Last Section">
+                    <br>
+                    <label for="eventImage">Event Image</label>
+                    <input type="url" id="eventImage" name="eventImage" placeholder="Event Image">
+                    <br>
+                    <hr class="solid">
+                </fieldset>
+                <input type="submit" style="text-align:left;" id="submit"> 
+    </form>
+
+
+</body>
+</html>

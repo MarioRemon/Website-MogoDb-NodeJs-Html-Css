@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/competitionForm.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/generalUserStyle.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" >    
+
+    <title>Competition</title>
+    
+    
+</head>
+<body>
+    
+<div class="navigationBar">
+    <a href="/contactUs"><i class= "fa fa-calendar-check-o "></i> Reach Out</a>
+    <a href="/aboutUs"><i class= "fa fa-info-circle"></i> About Us</a>
+    <a href="/donation"><i class= "far fa-heart"></i> Give</a>
+    <div class="navDropDown">
+        <button class="navdropbtn">Events
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navdropdown-content">
+        <a href="/event">Annual Events</a>
+        <a href="/booking">Theater</a>
+        <a href="/event">Masses</a>
+        </div>
+    </div>
+    <a href="/"><i class="fa fa-home fa-2xl"></i></a>
+    <a  href="/competitionsHome">Competetions <i class="fas fa-dice"></i></a>
+    <a href="/wedding">Book a Wedding  <i class="fa fa-group"></i></a>
+    <div class="navUserSign">
+    <button class="navdropUserSign">
+        <i class="fas fa-user"></i>
+    </button>
+    <div class="navdropdown-content">
+    <a href="/deletecookie">Sign Out</a>
+    </div>
+</div>
+
+</div>
+
+    <h2 class="pageTitle">Competition</h2>
+    <h3 id="competitionName"  style="text-align: center;"><%= competition.competitionName %></h3>
+    <div class="bodyDiv">
+    <form action="/submitCompetitionAnswers?competitionName=<%= competition.competitionName %>" method="post">
+        <div class="leftDiv">
+                <label id="competitionStartDate">Start Date: <%= competition.competitionStartDate %></label>
+                <br>
+                <label id="competitionEndDate">End Date: <%= competition.competitionEndDate %></label>
+                <br>
+            <fieldset class="competitionFieldSets">
+                <legend class="formLegend">Question 1</legend>
+                <label class="formQuestion" id="question1"><%= competition.question1 %></label>
+                <br>
+                <input type="radio" name="question1Answer" id="question1Answer1" value="question1Answer1">
+                <label for="question1Answer1" id="question1Answer1Text"><%= competition.question1Answer1 %></label>
+                <br>
+                <input type="radio" name="question1Answer" id="question1Answer2" value="question1Answer2">
+                <label for="question1Answer2" id="question1Answer2Text"><%= competition.question1Answer2 %></label>
+                <br>
+                <input type="radio" name="question1Answer" id="question1Answer3" value="question1Answer3">
+                <label for="question1Answer3" id="question1Answer3Text"><%= competition.question1Answer3 %></label>
+                <br>
+                <input type="radio" name="question1Answer" id="question1Answer4" value="question1Answer4">
+                <label for="question1Answer4" id="question1Answer4Text"><%= competition.question1Answer4 %></label>
+                <br>
+            </fieldset>
+            <fieldset class="competitionFieldSets">
+                <legend class="formLegend">Question 2</legend>
+                <label class="formQuestion" id="question2"><%= competition.question2 %></label>
+                <br>          
+                <input type="radio" name="question2Answer" id="question2Answer1" value="question2Answer1">
+                <label for="question2Answer1" id="question2Answer1Text"><%= competition.question2Answer1 %></label>
+                <br>
+                <input type="radio" name="question2Answer" id="question2Answer2" value="question2Answer2">
+                <label for="question2Answer2" id="question2Answer2Text"><%= competition.question2Answer2 %></label>
+                <br>
+                <input type="radio" name="question2Answer" id="question2Answer3"  value="question2Answer3">
+                <label for="question2Answer3" id="question2Answer3Text"><%= competition.question2Answer3 %></label>
+                <br>
+                <input type="radio" name="question2Answer" id="question2Answer4"  value="question2Answer4">
+                <label for="question2Answer4" id="question2Answer4Text"><%= competition.question2Answer4 %></label>
+                <br>
+            </fieldset>
+        </div>
+        <div class="rightDiv">
+            <fieldset class="competitionFieldSets">
+                <legend class="formLegend">Question 3</legend>
+                <label class="formQuestion" id="question3"><%= competition.question3 %></label>
+                <br>
+                <input type="radio" name="question3Answer" id="question3Answer1" value="question3Answer1" >
+                <label for="question3Answer1" id="question3Answer1Text"><%= competition.question3Answer1 %></label>
+                <br>
+                <input type="radio" name="question3Answer" id="question3Answer2"  value="question3Answer2">
+                <label for="question3Answer2" id="question3Answer2Text"><%= competition.question3Answer2 %></label>
+                <br>
+                <input type="radio" name="question3Answer" id="question3Answer3" value="question3Answer3">
+                <label for="question3Answer3" id="question3Answer3Text"><%= competition.question3Answer3 %></label>
+                <br>
+                <input type="radio" name="question3Answer" id="question3Answer4"  value="question3Answer4">
+                <label for="question3Answer4" id="question3Answer4Text"><%= competition.question3Answer4 %></label>
+                <br>
+            </fieldset>
+            <fieldset class="competitionFieldSets">
+                <legend class="formLegend">Question 4</legend>
+                <label class="formQuestion" id="question4"><%= competition.question4 %></label>
+                <br>
+                <input type="radio" name="question4Answer" id="question4Answer1" value="question4Answer1">
+                <label for="question4Answer1" id="question4Answer1Text"><%= competition.question4Answer1 %></label>
+                <br>
+                <input type="radio" name="question4Answer" id="question4Answer2" value="question4Answer2">
+                <label for="question4Answer2" id="question4Answer2Text"><%= competition.question4Answer2 %></label>
+                <br>
+                <input type="radio" name="question4Answer" id="question4Answer3" value="question4Answer3">
+                <label for="question4Answer3" id="question4Answer3Text"><%= competition.question4Answer3 %></label>
+                <br>
+                <input type="radio" name="question4Answer" id="question4Answer4" value="question4Answer4">
+                <label for="question4Answer4" id="question4Answer4Text"><%= competition.question4Answer4 %></label>
+                <br>
+            </fieldset>
+            <fieldset class="competitionFieldSets">
+                <legend class="formLegend">Question 5</legend>
+                <label class="formQuestion" id="question5"><%= competition.question5 %></label>
+                <br>  
+                <input type="radio" name="question5Answer" id="question5Answer1" value="question5Answer1">
+                <label for="question5Answer1" id="question5Answer1Text"><%= competition.question5Answer1 %></label>
+                <br>
+                <input type="radio" name="question5Answer" id="question5Answer2"  value="question5Answer2">
+                <label for="question5Answer2" id="question5Answer2Text"><%= competition.question5Answer2 %></label>
+                <br>
+                <input type="radio" name="question5Answer" id="question5Answer3"  value="question5Answer3">
+                <label for="question5Answer3" id="question5Answer3Text"><%= competition.question5Answer3 %></label>
+                <br>
+                <input type="radio" name="question5Answer" id="question5Answer4"  value="question5Answer4">
+                <label for="question5Answer4" id="question5Answer4Text"><%= competition.question5Answer4 %></label>
+                <br>
+            </fieldset>
+        </div>
+        <input type="submit" onclick="correctCompetition()" name="competitionSubmission">
+    </form>
+</div>
+</body>
+</html>

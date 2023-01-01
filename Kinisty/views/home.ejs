@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="el kalam el haktbu 3la google 3shan ytala3li el site dah">
+    <title>Kenesty</title>
+    <link rel="stylesheet" href="/stylesheets/homeStyle.css" >
+    <link rel="stylesheet" href="/stylesheets/generalUserStyle.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" >    
+
+</head>
+<body>
+    <section>
+      <marquee direction="left">
+        <p> <strong>We believe that God is for you</strong> and that He still changes lives for the good.</p>
+      </marquee>
+    </section>
+    
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="/images/homeImg/bg.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+        <img src="/images/homeImg/Picture12.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="/images/homeImg/slide 3.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+    </div>
+    <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+    
+
+<div class="navigationBar">
+  <a href="/contactUs"><i class= "fa fa-calendar-check-o "></i> Reach Out</a>
+  <a href="/aboutUs"><i class= "fa fa-info-circle"></i> About Us</a>
+  <a href="/donation"><i class= "far fa-heart"></i> Give</a>
+  <div class="navDropDown">
+      <button class="navdropbtn">Events
+          <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="navdropdown-content">
+      <a href="/event">Annual Events</a>
+      <a href="/booking">Theater</a>
+      <a href="/event">Masses</a>
+      </div>
+  </div>
+  <a href="/"><i class="fa fa-home fa-2xl"></i></a>
+  <a  href="/competitionsHome">Competetions <i class="fas fa-dice"></i></a>
+  <a href="/wedding">Book a Wedding  <i class="fa fa-group"></i></a>
+  <a class="loginButton"> <button class="center" id = "show-login" ><i> Login</i></button></a>
+  <div class="navUserSign">
+    <button class="navdropUserSign">
+        <i class="fas fa-user"></i>
+    </button>
+    <div class="navdropdown-content">
+    <a href="/deletecookie">Sign Out</a>
+    </div>
+  </div>
+
+</div>
+
+
+    <div class="serviceTimes">
+      <h1>Service Times</h1>
+      <div class="serviceTimesLeft">
+      <h2>Sunday:</h2>
+      </div>
+
+      <div class="serviceTimesRight">
+        <h2>Friday:</h2>
+        </div>
+      
+    </div>
+
+    <div>
+      <h1 id="services" >Services Provided</h1></div>
+
+  <div class="services" >
+    <a class="cardEvents" href="/event" style="text-decoration: none ;">
+      <img  class="cardImg" src="/images/homeImg/events.jpg" alt="Events Picture" style="width:100% ">
+      <div class="container">
+        <h4><b>Events</b></h4> 
+        <p><small>The church arrange a multiple of social events every year. It makes members enjoy spending time together and participate in different activities.</small></p> 
+      </div>
+    </a>
+
+    <a class="cardCompetitions"  href="/competitionsHome" style="text-decoration: none ;">
+      <img  class="cardImg" src="/images/homeImg/competitions.jpg" alt="Competitions Picture" style="width:100% ">
+      <div class="container">
+        <h4><b>Competitions</b></h4> 
+        <p><small>Participate in our online competitions and get the chance to win a free ticket to an event or other awards.</small></p> 
+      </div>
+    </a>
+
+    <a class="cardWeddings" href="/wedding" style="text-decoration: none ;">
+      <img  class="cardImg" src="/images/homeImg/weddingCermonies.jpg" alt="Wedding Picture" style="width:100% ">
+      <div class="container">
+        <h4><b>Wedding Cermonies</b></h4> 
+        <p><small>Book your wedding now at Kenesty and have your memorable day.</small></p> 
+      </div>
+    </a>
+  
+    <a class="cardContactUs" href="/contactUs" style="text-decoration: none ;">
+      <img  class="cardImg" src="/images/homeImg/contactUs.png" alt="ContactUs Picture" style="width:100% ">
+      <div class="container">
+        <h4><b>Contact Us </b></h4> 
+        <p><small>Click to know the times the priest schedules and when they are available.</small></p> 
+      </div>
+    </a>
+
+
+    <a class="cardDonations" href="/donation" style="text-decoration: none ;">
+      <img  class="cardImg" src="/images/homeImg/donate.jpg" alt="Donations Picture" style="width:100% ">
+      <div class="container">
+        <h4><b>Donations </b></h4> 
+        <p><small>Show your support.</small></p> 
+      </div>
+    </a>
+
+    <a class="cardAboutUs" href="/aboutUs" style="text-decoration: none ;" >
+      <img  class="cardImg" src="/images/homeImg/aboutUs.jpg" alt="AboutUs Picture" style="width:100% ">
+      <div class="container">
+        <h4><b>About Us </b></h4> 
+        <p><small>Know more about Kenesty</small></p> 
+      </div>
+    </a>
+
+
+
+  </div>
+
+
+
+  <div class="fixedFooter">
+    <div class="fixedFooterIcons">
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fa-xl" style="padding:20px"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f fa-xl" style="padding:20px"></i></a>
+      <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-xl" style="padding:20px"></i></a>
+      <a href="https://www.google.com/"  target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play fa-xl" style="padding:20px"></i></a>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="footerIcons">
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fa-2xl" style="padding:20px"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f fa-2xl" style="padding:20px"></i></a>
+      <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-2xl" style="padding:20px"></i></a>
+      <a href="https://www.google.com/"  target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play fa-2xl" style="padding:20px"></i></a>
+    </div>
+
+    <div class="footerLeft">
+      <a class = "footerTitle"> CONTACT</a>
+      <br>
+      <br>
+      <a><i class="fas fa-phone-square-alt" style="padding:10px"></i> 12345</a>
+      <br>
+      <a><i class="fas fa-envelope-square" style="padding:10px"></i> kenesty@cairo.org.eg</a>
+    </div>
+
+    <div class="footerRight">
+      <a class = "footerTitle"> LOCATION</a>
+      <br>
+      <br>
+      <a><i class="fas fa-map-marker-alt" style="padding:10px"></i> 123, XYZ Road ASU</a>
+      <br>
+      <a> Cairo, EGYPT</a>
+    </div>
+
+    <div class="footerText">
+      <a href="/"><i  style="padding:10px"></i> Home</a>
+      <a href="index.html#services" ><i  style="padding:10px"></i>Services</a>
+      <a><i  style="padding:10px"></i>About</a>
+      <a><i  style="padding:10px"></i>Privacy Policy</a>
+    </div>
+
+    <div class="copyright"> <a><i class="far fa-copyright" style="padding:2px"></i></a>2022 ASU Engineers | All Rights Reserved</div>
+
+
+  </div>
+
+
+
+
+
+  
+
+
+
+
+
+
+    <!-- <div class="center">
+      <button id="show-login">Login</button>
+    </div> -->
+
+
+    <div class = "popup">
+      <div class="close-btn">&times;</div>
+      <div class="form">
+
+        <div class="split left">
+        <img src="/images/homeImg/st-anthony-s-catholic.jpg" class = "leftpic" alt="Church" title="knisty"  height="100%" width="50%"/>
+        </div>
+
+        <div class="split right">
+            <h1 class="pageTitles">كنيستى</h1>
+            <br>
+            <br>
+            <form class="login_form" method="post" action="/validateUserLogin" name="form" onsubmit="return validated()">
+              <div class="imgcontainer">
+                <img src="/images/homeImg/kenstylogo2.png" alt="knesty" class="knestylogo">
+              </div>
+              <legend class="SignInTitle">Sign in to your account</legend>
+              <div class="input-container">            
+                <i class="fas fa-user icon"></i>
+              <input class="input-container"
+              autocomplete="off"
+              id="userName"
+              name="userNameLogin"
+              type="text"
+              placeholder="Enter Your ID"
+              />
+            <div id="username_error">Please Fill up your ID</div>
+            
+              
+                <i class="fas fa-lock icon"></i>
+                
+                <input class="input-container pass_field"
+                  id="id_password"
+                  name="passwordLogin"
+                  autocomplete="off"
+                  type="password"
+                  placeholder="Enter Password"
+                />
+                <i class="fa fa-eye" id="togglePassword" style="cursor: pointer" ></i> 
+                <div id="pass_error">Please Fill up your password</div>
+      
+                <button type="submit" id="loginbtn">Login</button>
+                <a class="forgotPasswordLink" href="#"> Forgot Password? </a> 
+
+                <br>
+              
+                <label class="keepme">
+                  <input type="checkbox" checked="checked" name="rememeber" />
+                  Keep me signed in
+                </label>
+              <div>
+            </form>
+          </div>
+          <script src="/javascripts/home.js" rel></script>
+        </div>  
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

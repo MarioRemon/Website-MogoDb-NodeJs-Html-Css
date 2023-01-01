@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="/stylesheets/PaymentPageCss.css" rel="stylesheet" />
+<link rel="stylesheet" href="/stylesheets/generalUserStyle.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" >    
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ticket</title>
+</head>
+<body>
+    
+<div class="navigationBar">
+    <a href="/contactUs"><i class= "fa fa-calendar-check-o "></i> Reach Out</a>
+    <a href="/aboutUs"><i class= "fa fa-info-circle"></i> About Us</a>
+    <a href="/donation"><i class= "far fa-heart"></i> Give</a>
+    <div class="navDropDown">
+        <button class="navdropbtn">Events
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navdropdown-content">
+        <a href="/event">Annual Events</a>
+        <a href="/booking">Theater</a>
+        <a href="/event">Masses</a>
+        </div>
+    </div>
+    <a href="/"><i class="fa fa-home fa-2xl"></i></a>
+    <a  href="/competitionsHome">Competetions <i class="fas fa-dice"></i></a>
+    <a href="/wedding">Book a Wedding  <i class="fa fa-group"></i></a>
+    <div class="navUserSign">
+    <button class="navdropUserSign">
+        <i class="fas fa-user"></i>
+    </button>
+    <div class="navdropdown-content">
+    <a href="/deletecookie">Sign Out</a>
+    </div>
+</div>
+
+</div>
+<article>
+    <h2 class="ticketdetails" style="text-align: center; padding-top: 3%;">Ticket Details</h2>
+    <div class="ticketdetailsContainer">
+    <img src="/images/ticketImg/ticket.png" alt="ticket" style="width: 100%" />
+    <div class="TicketsdetailsTextBoxName" style="font-size: large;">
+        <h3> <%= event.eventName %> </h3>
+    </div>
+    <div class="TicketsdetailsTextBoxDate" style="font-size: 5px;">
+        <h1><%= event.eventDate %></h1>
+    </div>
+    <div class="TicketsdetailsTextBoxPrice">
+        <h1>Price <%= price %></h1>
+    </div>
+    <div class="TicketsdetailsTextBoxSeatNum">
+        <h1>Seat Num : A</h1>
+    </div>
+    <div class="TicketsdetailsTextBoxEventName" style="font-size:x-large;">
+        <h1><%= event.eventName %></h1>
+    </div>
+    <div class="TicketsdetailsTextBoxTicketNum">
+        <h1>Ticket No: 1</h1>
+    </div>
+    <div class="TicketsdetailsTextBoxRotatedSide" style="font-size: medium;">
+        <h1> <%= event.eventName %></h1>
+        <h2><%= event.eventDate %></h2>
+    </div>
+    </div>
+</article>
+</body>
+</html>

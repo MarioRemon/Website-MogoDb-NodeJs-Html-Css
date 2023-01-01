@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="js.js" rel="stylesheet" />
+<link href="/stylesheets/PaymentPageCss.css" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Payment</title>
+</head>
+<body>
+<article>
+    <h2 class="paymentdetailsheader">Payment Details</h2>
+
+    <hr style="width: 50%" />
+    <br />
+    <div class="paybycc">
+    <button onclick="show_hide()" id="clockButton1">
+        <img src="images\visa.jpg" width="280px" height="180px" />Credit Card
+    </button>
+    </div>
+    <div class="paybyfawry">
+    <button onclick="show_hide2()" id="clockButton2">
+        <img src="images\download.png" />Fawry
+    </button>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br>
+
+    <div id="content">
+    <div class="containerCheckoutForm">
+        <form action="">
+        <div class="row">
+            <div class="col">
+            <h3 class="title">Billing Address</h3>
+
+            <div class="inputBox">
+                <span>Full Name :</span>
+                <input type="text" placeholder="Enter your Full Name" />
+            </div>
+            <div class="inputBox">
+                <span>Email:</span>
+                <input type="text" placeholder="example@example.com" />
+            </div>
+            <div class="inputBox">
+                <span>Address :</span>
+                <input type="text" placeholder="room - street - apartment" />
+            </div>
+            <div class="inputBox">
+                <span>City :</span>
+                <input type="text" placeholder="Enter your city" />
+            </div>
+                <div class="inputBox">
+                <span>Zip Code :</span>
+                <input type="text" placeholder="123 456" />
+                </div>
+            
+            </div>
+            </div>
+
+
+            <div class="col">
+            <h3 class="title">Payment</h3>
+
+
+            <div class="inputBox">
+                <span>Cards accepted </span>
+                <br>
+                <img src="F:\donation\images\Credit-Card-Logos-1024x156.jpg" alt="visa" width="300px" height="50px">
+            </div>
+            <div class="inputBox">
+                <span>Name on card :</span>
+                <br>
+                <input type="text" placeholder="Enter your Full Name" />
+            </div>
+
+            <div class="inputBox">
+                <span>Credit Card Number :</span>
+                <br>
+                <input type="text" placeholder="1111- 2222- 3333- 4444" />
+            </div>
+            <div class="inputBox">
+                <span>Exp month :</span>
+                <br>
+                <input type="text" placeholder="january" />
+            </div>
+
+                <div class=flex">
+                <div class="inputBox"> 
+                    <span>Exp Year :</span>
+                    <br>
+                    <input type="text" placeholder="2022" />
+                </div>
+                <div class="inputBox">
+                    <span>CVV :</span>
+                    <br>
+                    <input type="text" placeholder="123 " />
+                </div>
+        
+                <input type="submit" value="Proceed to checkout" class="submit-btn">
+
+            </div>
+
+            </div>
+
+        </div>
+
+                    
+
+
+        </form>
+    </div>
+
+
+    <div id="content2">
+    <div class="containerCheckoutForm">
+        <form action="">
+        <div class="row">
+            <div class="col">
+            <h3 class="title">Fawry Payment</h3>
+            <div class="inputBox">
+                <span>Full Name :</span>
+                <input type="text" placeholder="Enter your Full Name" />
+            </div>
+            <div class="inputBox">
+                <span>Email :</span>
+                <input type="text" placeholder="example@example.com" />
+            </div>
+            <div class="inputBox">
+                <span>Phone Number:</span>
+                <input type="text" placeholder="010XXXXXXXX" />
+            </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    <script>
+    let a;
+    function show_hide() {
+        if (a == 1) {
+        document.getElementById("content").style.display = "inline";
+        document.getElementById("content2").style.display = "none";
+        return (a = 0);
+        } else {
+        document.getElementById("content").style.display = "none";
+        return (a = 1);
+        }
+    }
+    let b;
+    function show_hide2() {
+        if (b == 1) {
+        document.getElementById("content2").style.display = "inline";
+        document.getElementById("content").style.display = "none";
+        return (b = 0);
+        } else {
+        document.getElementById("content2").style.display = "none";
+        return (b = 1);
+        }
+    }
+    </script
+    </script>
+</article>
+</body>
+</html>

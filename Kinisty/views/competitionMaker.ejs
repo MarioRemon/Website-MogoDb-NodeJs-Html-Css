@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/competitionMakerStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/generalAdminStyle.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" >    
+    <title>Competition Maker</title>
+</head>
+<body>
+    
+<div class="navigationBar">
+    <a href="/contactUs"><i class= "fa fa-calendar-check-o "></i> Reach Out</a>
+    <a href="/aboutUs"><i class= "fa fa-info-circle"></i> About Us</a>
+    <a href="/donation"><i class= "far fa-heart"></i> Give</a>
+    <div class="navDropDown">
+        <button class="navdropbtn">Events
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navdropdown-content">
+        <a href="/event">Annual Events</a>
+        <a href="/booking">Theater</a>
+        <a href="/event">Masses</a>
+        </div>
+    </div>
+    <a href="/"><i class="fa fa-home fa-2xl"></i></a>
+    <a  href="/competitionsHome">Competetions <i class="fas fa-dice"></i></a>
+    <a href="/wedding">Book a Wedding  <i class="fa fa-group"></i></a>
+    <a href="/homeAdmin"><i class="fa fa-home"></i></a>
+<div class="navUserSign">
+    <button class="navdropUserSign">
+        <i class="fas fa-user"></i>
+    </button>
+    <div class="navdropdown-content">
+    <a href="/deletecookie">Sign Out</a>
+    </div>
+</div>
+
+</div>
+
+    <h2 class="pageTitle"> New Competition</h2>
+    <div class="bodyDiv" >
+    <form action="/newCompetition" method="post">
+        <div class="leftDiv">
+            <fieldset class="competitionFieldSets">
+                <legend>Competition General Details</legend>
+                <label for="competitionName">Competition Name :</label>
+                <input type="text" id="competitionName" name="competitionName" placeholder="Competition Name" required>
+                <br>
+                <label for="competitionStartDate">Start Date</label>
+                <input type="date" id="competitionStartDate" name="competitionStartDate" required>
+                <br>
+                <label for="competitionEndDate">End Date</label>
+                <input type="date" id="competitionEndDate" name="competitionEndDate" required>
+                <br>
+                <label for="competitionImage">Image</label>
+                <input type="url" id="competitionImage" name="competitionImage" placeholder="Image url">
+            </fieldset>
+            <fieldset class="competitionFieldSets">
+                <legend>Question 1</legend>
+                <label for="question1">Question 1:</label>
+                <input type="text" id="question1" name="question1" placeholder="Question 1" size="50%" required>
+                <br>
+                <label for="question1Answer1">choice 1</label>
+                <input type="text" name="question1Answer1" id="question1Answer1" placeholder="choice 1">
+                <input type="radio" class="question1RightAnswer" name="question1RightAnswer" value="question1Answer1">
+                <label for="question1RightAnswer">Right Choice</label>
+                <br>
+                <label for="question1Answer2">choice 2</label>
+                <input type="text" name="question1Answer2" id="question1Answer2" placeholder="choice 2">
+                <input type="radio" class="question1RightAnswer" name="question1RightAnswer" value="question1Answer2">
+                <label for="question1RightAnswer">Right Choice</label>
+                <br>
+                <label for="question1Answer3">choice 3</label>
+                <input type="text" name="question1Answer3" id="question1Answer3" placeholder="choice 3">
+                <input type="radio" class="question1RightAnswer" name="question1RightAnswer" value="question1Answer3">
+                <label for="question1RightAnswer">Right Choice</label>
+                <br>
+                <label for="question1Answer4">choice 4</label>
+                <input type="text" name="question1Answer4" id="question1Answer4" placeholder="choice 4">
+                <input type="radio" class="question1RightAnswer" name="question1RightAnswer" value="question1Answer4">
+                <label for="question1RightAnswer">Right Choice</label>
+                <br>
+            </fieldset>
+            <fieldset class="competitionFieldSets">
+                <legend>Question 2</legend>
+                <label for="question2">Question 2:</label>
+                <input type="text" id="question2" name="question2" placeholder="Question 2" size="50%">
+                <br>
+                <label for="question2Answer1">choice 1</label>
+                <input type="text" name="question2Answer1" id="question2Answer1" placeholder="choice 1">
+                <input type="radio" class="question2RightAnswer" name="question2RightAnswer" value="question2Answer1">
+                <label for="question2RightAnswer">Right Choice</label>
+                <br>
+                <label for="question2Answer2">choice 2</label>
+                <input type="text" name="question2Answer2" id="question2Answer2" placeholder="choice 2">
+                <input type="radio" class="question2RightAnswer" name="question2RightAnswer" value="question2Answer2">
+                <label for= "question2RightAnswer">Right Choice</label>
+                <br>
+                <label for="question2Answer3">choice 3</label>
+                <input type="text" name="question2Answer3" id="question2Answer3" placeholder="choice 3">
+                <input type="radio" class="question2RightAnswer" name="question2RightAnswer" value="question2Answer3">
+                <label for="question2RightAnswer">Right Choice</label>
+                <br>
+                <label for="question2Answer4">choice 4</label>
+                <input type="text" name="question2Answer4" id="question2Answer4" placeholder="choice 4">
+                <input type="radio" class="question2RightAnswer" name="question2RightAnswer" value="question2Answer4">
+                <label for="question2RightAnswer">Right Choice</label>
+                <br>
+            </fieldset>
+        </div>
+        <div class="rightDiv">
+            <fieldset class="competitionFieldSets">
+                <legend>Question 3</legend>
+                <label for="question3">Question 3:</label>
+                <input type="text" id="question3" name="question3" placeholder="Question 3" size="50%">
+                <br>
+                <label for="question3Answer1">choice 1</label>
+                <input type="text" name="question3Answer1" id="question3Answer1" placeholder="choice 1">
+                <input type="radio" class="question3RightAnswer" name="question3RightAnswer" value="question3Answer1">
+                <label for="question3RightAnswer">Right Choice</label>
+                <br>
+                <label for="question3Answer2">choice 2</label>
+                <input type="text" name="question3Answer2" id="question3Answer2" placeholder="choice 2">
+                <input type="radio" class="question3RightAnswer" name="question3RightAnswer" value="question3Answer2">
+                <label for="question3RightAnswer">Right Choice</label>
+                <br>
+                <label for="question3Answer3">choice 3</label>
+                <input type="text" name="question3Answer3" id="question3Answer3" placeholder="choice 3">
+                <input type="radio" class="question3RightAnswer" name="question3RightAnswer" value="question3Answer3">
+                <label for="question3RightAnswer">Right Choice</label>
+                <br>
+                <label for="question3Answer4">choice 4</label>
+                <input type="text" name="question3Answer4" id="question3Answer4" placeholder="choice 4">
+                <input type="radio" class="question3RightAnswer" name="question3RightAnswer" value="question3Answer4">
+                <label for="question3RightAnswer">Right Choice</label>
+                <br>
+            </fieldset>
+            <fieldset class="competitionFieldSets">
+                <legend>Question 4</legend>
+                <label for="question4">Question 4:</label>
+                <input type="text" id="question4" name="question4" placeholder="Question 4" size="50%">
+                <br>
+                <label for="question4Answer1">choice 1</label>
+                <input type="text" name="question4Answer1" id="question4Answer1" placeholder="choice 1">
+                <input type="radio" class="question4RightAnswer" name="question4RightAnswer" value="question4Answer1">
+                <label for="question4RightAnswer">Right Choice</label>
+                <br>
+                <label for="question4Answer2">choice 2</label>
+                <input type="text" name="question4Answer2" id="question4Answer2" placeholder="choice 2">
+                <input type="radio" class="question4RightAnswer" name="question4RightAnswer" value="question4Answer2">
+                <label for="question4RightAnswer">Right Choice</label>
+                <br>
+                <label for="question4Answer3">choice 3</label>
+                <input type="text" name="question4Answer3" id="question4Answer3" placeholder="choice 3">
+                <input type="radio" class="question4RightAnswer" name="question4RightAnswer" value="question4Answer4">
+                <label for="question4RightAnswer">Right Choice</label>
+                <br>
+                <label for="question4Answer4">choice 4</label>
+                <input type="text" name="question4Answer4" id="question4Answer4" placeholder="choice 4">
+                <input type="radio" class="question4RightAnswer" name="question4RightAnswer" value="question4Answer4">
+                <label for="question4RightAnswer">Right Choice</label>
+                <br>
+            </fieldset>
+            <fieldset class="competitionFieldSets">
+                <legend>Question 5</legend>
+                <label for="question5">Question 5:</label>
+                <input type="text" id="question5" name="question5" placeholder="Question 5" size="50%">
+                <br>
+                <label for="question5Answer1">choice 1</label>
+                <input type="text" name="question5Answer1" id="question5Answer1" placeholder="choice 1">
+                <input type="radio" class="question5RightAnswer" name="question5RightAnswer" value="question5Answer1">
+                <label for="question5RightAnswer">Right Choice</label>
+                <br>
+                <label for="question5Answer2">choice 2</label>
+                <input type="text" name="question5Answer2" id="question5Answer2" placeholder="choice 2">
+                <input type="radio" class="question5RightAnswer" name="question5RightAnswer" value="question5Answer2">
+                <label for="question5RightAnswer">Right Choice</label>
+                <br>
+                <label for="question5Answer3">choice 3</label>
+                <input type="text" name="question5Answer3" id="question5Answer3" placeholder="choice 3">
+                <input type="radio" class="question5RightAnswer" name="question5RightAnswer" value="question5Answer3">
+                <label for="question5RightAnswer">Right Choice</label>
+                <br>
+                <label for="question5Answer4">choice 4</label>
+                <input type="text" name="question5Answer4" id="question5Answer4" placeholder="choice 4">
+                <input type="radio" class="question5RightAnswer" name="question5RightAnswer" value="question5Answer4">
+                <label for="question5RightAnswer">Right Choice</label>
+                <br>
+            </fieldset>
+        </div>
+        <input type="submit" onclick="validateDates" name="competitionSubmission">
+    </form>
+</div>
+</body>
+</html>

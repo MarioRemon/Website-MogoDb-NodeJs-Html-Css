@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/generalAdminStyle.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" >
+<title>Registration Form</title>
+</head>
+<body>
+    <div class="navigationBar">
+        <a href="/contactUs"><i class= "fa fa-calendar-check-o "></i> Reach Out</a>
+        <a href="/aboutUs"><i class= "fa fa-info-circle"></i> About Us</a>
+        <a href="/donation"><i class= "far fa-heart"></i> Give</a>
+        <div class="navDropDown">
+            <button class="navdropbtn">Events
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="navdropdown-content">
+            <a href="/event">Annual Events</a>
+            <a href="/booking">Theater</a>
+            <a href="/event">Masses</a>
+            </div>
+        </div>
+        <a href="/"><i class="fa fa-home fa-2xl"></i></a>
+        <a  href="/competitionsHome">Competetions <i class="fas fa-dice"></i></a>
+        <a href="/wedding">Book a Wedding  <i class="fa fa-group"></i></a>
+        <a href="/homeAdmin"><i class="fa fa-home"></i></a>
+        <div class="navUserSign">
+        <button class="navdropUserSign">
+            <i class="fas fa-user"></i>
+        </button>
+        <div class="navdropdown-content">
+        <a href="/deletecookie">Sign Out</a>
+        </div>
+    </div>
+    
+    </div>
+<div class="parent" style="top: 90%;">
+    <h1>
+        Sign up a User &#128221;
+    </h1>
+    <form action="/submitRegistration" method="post">
+    `   <hr class="solid" width="610px" >
+        <fieldset style="width: 600px">
+            <legend>
+                <h2>
+                    Personal Data
+                </h2>
+            </legend>
+            <label for="firstName">First Name</label>
+            <input required type="text" id="firstName" name="firstName" placeholder="Enter User's first name">
+            <br>
+
+            <label for="secondName">Last Name</label>
+            <input required type="text" id="secondName" name="secondName" placeholder="Enter User's Second name" > 
+            <br>
+
+            <label for="email">E-mail</label>
+            <input required type="email" id="email" name="email" placeholder="User's e-mail" >
+            <br>
+
+            <label for="phoneNumber">phoneNumber</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter User's phoneNumber">
+            <br> 
+
+            <label for="dateOfBirth">Date of birth</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" min="3" max="70">
+            <br>
+            <section class="gender">
+                <label for="c1" >Male</label>
+                <input type="radio" id="c1" name="gender" value="Male" >
+                <br>
+                <label for="c2" >Female</label>
+                <input type="radio" id="c2" name="gender" value="Female">
+                </section>
+            <hr class="solid">
+            
+            <legend>
+                <h3>
+                    User name and password
+                </h3>
+            </legend>
+
+            <label for="userName">User Name</label>
+            <input required type="text" id="userName" name="userName" placeholder="Enter UserName" >
+            <br>
+            <label for="password"> Password</label>
+            <input required type="password" id="password" name="password" placeholder="Enter Password">
+            <br>
+            <label for="confirmPassword"> Confirm Password</label>
+            <input required type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter Password">
+            <br>
+
+            <hr class="solid">
+            <legend>
+                <h4>
+                    Other info
+                </h4>
+            </legend>
+            
+                <label for="schoolLevel" accesskey="i" >School level</label>
+                <select name="schoolLevel" id="schoolLevel">
+                    <option selected disabled>School Level</option>
+                    <optgroup label="Foundation">
+                    <option value="kg1">Kg1</option>
+                    <option value="kg2">Kg2</option>
+                    </optgroup>
+                    <optgroup label="Primary">
+                    <option value="grade1">Grade 1</option>
+                    <option value="grade2">Grade 2</option>
+                    <option value="grade3">Grade 3</option>
+                    <option value="grade4">Grade 4</option>
+                    <option value="grade5">Grade 5</option>
+                    <option value="grade6">Grade 6</option>
+                    </optgroup>
+                    <optgroup label="Preparatory">
+                    <option value="grade7">Grade 7</option>
+                    <option value="grade8">Grade 8</option>
+                    <option value="grade9">Grade 9</option>
+                    </optgroup>
+                    <optgroup label="Secondary">
+                    <option value="grade10">Grade 10</option>
+                    <option value="grade11">Grade 11</option>
+                    <option value="grade12">Grade 12</option>
+                    </optgroup>
+                    <option value="college">College</option>
+                    <option value="graduate">Graduate</option>
+                </select>       
+                <span class="akey" ></span>
+
+            <label for="status" >Status</label>
+            <input type="text" id="status" name="status" placeholder="Enter user's status" >
+            <br>
+            <label for="rankOfDeacon" >Rank of Deacon</label>
+            <input type="text" id="rankOfDeacon" name="rankOfDeacon" placeholder="Enter user's rank of deacon" >
+            <br>
+
+        </fieldset>
+            
+        <input type="submit" style="text-align:left;" id="submit"> 
+    </form>
+
+</div>
+<!-- <div class="container2">
+    <img src="/images/signUpImg/signUpLeft.jpg" alt="">
+</div>
+<div class="container3">
+    <img src="/images/signUpImg/signUpRight.jpg" alt=""> -->
+
+</div> 
+</body>
+</html>
