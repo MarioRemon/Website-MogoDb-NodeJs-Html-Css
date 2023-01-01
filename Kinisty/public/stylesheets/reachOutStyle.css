@@ -1,0 +1,119 @@
+.one{
+    /* background-color: aquamarine; */
+    height: 250px;
+    
+}
+/* .two{
+    padding-top: 100px; */
+    /* background-color: bisque; */
+    /* height: 630px;
+    padding-bottom: 60px;
+    padding-left: 5%;
+
+} */
+.weekImg {
+    opacity: 0.9;
+    height: 120%; 
+    /* height: auto; */
+    /* padding-top: 50px;
+    padding-left: 400px; */
+    /* border: 1px solid grey; */
+    /* border-radius: 4px; */
+    /* left: 10px; */
+    margin-left: 0px;
+    margin-top: 10px;
+    max-width: 2000px;
+    /* border-radius: 50%; */
+    /* width: 1200px; */
+} 
+hr{
+    display: block;
+    margin-top: 200px;
+    /* top: 80px; */
+}
+.week label{
+    font-size: 40px;
+    color: rgb(52, 52, 49);
+    font-style: italic;
+    /* margin: 30px;  */
+    cursor: pointer;
+    /* padding-left: 1%; */
+    /* padding-top: 90px; */
+}
+
+.two{
+    display: flex;
+    flex-wrap: wrap;
+    /* max-width: 1000px; */
+    margin: 60px auto;
+    padding-top: 5%;
+    padding-right: 40%;
+    padding-left: 5%;
+    /* width: 54%; */
+    padding-bottom: 3%;
+
+    height: 300%;
+    /* padding: 25px; */
+}
+
+.two input[type="radio"] {
+    display: none;
+    height: 300%;
+}
+.two label{
+    
+    padding: 25px;
+    background:rgb(177, 152, 111);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 26px;
+    height: 300%;
+    width: 22%;
+    border-radius: 25px 25px 0px 0px;
+    
+}
+.two .tab {
+    width: 100%;
+    padding: 15px;
+    background: rgb(247, 228, 181);
+    order: 1;
+    display: none;
+    
+    height: 400%;
+    border-radius: 0px 25px 0px 0px;
+    
+}
+.two .tab h2{
+    font-size: 3m;
+}
+.two input[type='radio']:checked + label + .tab {
+    display:block;
+    
+    
+}
+.two input[type="radio"]:checked + label{
+    background: rgb(247, 228, 181);
+    
+    
+}
+h1{
+    position: relative;
+    /* margin: 0px 0px 550px; */
+    padding: 0px;
+    color:rgb(62, 62, 59);
+    font-size: 55px;
+    /* left: 900px; */
+    /* padding-left: 66%; */
+    /* right: 10px; */
+    top: 180px;
+    text-align: center;
+    margin-top: 0%;
+}
+h3{
+    font-size: 40px;
+    color: rgb(70, 56, 40);
+    /* font-style: italic; */
+    padding-left: 3%;
+
+}
+

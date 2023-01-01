@@ -1,0 +1,20 @@
+.rightDiv{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    top:27%;
+}
+.leftDiv{
+    padding-left: 4%;
+    width: 50%;
+}
+.competitionFieldSets{
+    width: 80%;
+}
+.formLegend,  .formQuestion{
+    font-size:x-large;
+    font-weight: bold;
+}
+.formQuestion{
+    font-size: large;
+}

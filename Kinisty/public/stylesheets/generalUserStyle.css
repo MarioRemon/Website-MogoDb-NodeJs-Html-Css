@@ -1,0 +1,615 @@
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+
+
+body {
+
+overflow-x: hidden; /* Hide horizontal scrollbar */
+background-color: #ded7cc;
+}
+
+
+/* Navbar container */
+.navigationBar {
+background-color: #c18c5d;
+font-family: Arial, Helvetica, sans-serif;
+position: absolute;
+top: 0px;
+width: 100%;
+height: 55px;
+}
+
+/* Links inside the navbar */
+.navigationBar a {
+float: left;
+font-size: 18px;
+font-weight: bold;
+color: white;
+text-align: center;
+padding: 17px 2.77%;
+text-decoration: none;
+height: 55px;
+}
+
+/* The dropdown container */
+.navDropDown {
+float: left;
+overflow: hidden;
+}
+
+/* Dropdown button */
+.navDropDown .navdropbtn {
+font-size: 18px;  
+font-weight: bold;
+border: none;
+outline: none;
+height: 55px;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit; /* Important for vertical align on mobile phones */
+margin: 0; /* Important for vertical align on mobile phones */
+margin-right: 55px;
+}
+
+/* Add a red background color to navbar links on hover */
+.navigationBar a:hover, .navDropDown:hover .navdropbtn {
+color: black;
+background-color: rgb(221, 221, 221);
+}
+
+/* Dropdown content (hidden by default) */
+.navdropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.navdropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.navdropdown-content a:hover {
+background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.navDropDown:hover .navdropdown-content {
+display: block;
+}
+
+
+.navigationBar .loginButton{
+    padding-left: 0%;
+}
+
+.navigationBar .loginButton:hover{
+    color: black;
+    background-color: #c18c5d;
+}
+
+/* The dropdown container */
+.navUserSign {
+float: left;
+overflow: hidden;
+}
+
+/* Dropdown button */
+.navUserSign .navdropUserSign {
+font-size: 18px;  
+font-weight: bold;
+border: none;
+outline: none;
+height: 55px;
+color: white;
+padding: 14px 10px;
+background-color: inherit;
+font-family: inherit; /* Important for vertical align on mobile phones */
+margin: 0; /* Important for vertical align on mobile phones */
+margin-right: 55px;
+}
+
+/* Add a red background color to navbar links on hover */
+.navUserSign:hover .navdropUserSign {
+    color: black;
+    background-color: #c18c5d;
+}
+
+
+/* Show the dropdown menu on hover */
+.navUserSign:hover .navdropdown-content {
+display: block;
+}
+
+.center {
+/* position: absolute;
+top: 50%;
+left: 50%; */
+/* transform: translate(-50%,-50%); */
+/* padding: 10px 20px; */
+font-size: 15px;
+font-weight: 600;
+cursor: pointer;
+background: #ffffff;
+border: none;
+outline: none;
+border-radius:5px;
+box-sizing: 100%;
+width: 150%;
+height: 150%;
+}
+
+.center:hover {
+background-color: #169cc9;
+color: white;
+opacity: 100%;
+cursor: pointer;
+}
+
+
+.popup{
+position: absolute;
+top: -150%;
+left: 50%;
+opacity: 0;
+transform: translate(-50%,-50%) scale(1.25);
+width: 900px;
+height: 600px;
+padding: 20px 30px;
+background: #fff;
+box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+border-radius: 10px;
+transition: top 0ms ease-in-out 200ms,
+            opacity 200ms ease-in-out 0ms,
+            transform 200ms ease-in-out 0ms;
+}
+
+.popup.active{
+top: 50%;
+opacity: 1;
+transform: translate(-50%,-50%) scale(1);
+transition: top 0ms ease-in-out 0ms,
+            opacity 200ms ease-in-out 0ms,
+            transform 20ms ease-in-out 0ms;
+
+}
+
+.popup .close-btn{
+position: absolute;
+top: 10px;
+right: 10px;
+width: 15px;
+height: 15px;
+background: #888;
+color: #eee;
+text-align: center;
+line-height: 15px;
+border-radius: 15px;
+cursor: pointer;
+}
+
+
+
+/* el sign in popup */
+
+.leftpic img {
+float: left;
+height: 10%;
+width: 10%;
+/* object-position: center;
+object-fit: cover; */
+display: block;
+}
+.split {
+height: 100%;
+width: 50%;
+position: fixed;
+z-index: 1;
+top: 0;
+overflow-x: hidden;
+/* padding-top: 20px; */
+}
+
+.left {
+/* height: 500px;
+width: 300px; */
+left: 0px;
+width: 450px;
+border-radius: 10px;
+background-color: #008CBA;
+position: absolute;
+
+overflow: hidden;
+}
+.right {
+right: 25px;
+width: 50%;
+overflow: hidden;
+background-color: #ffffff;
+}
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+.pageTitles {
+top: -490px;
+right: 175px;
+text-align: center;
+position: absolute;
+font-size: 230%;
+
+}
+.SignInTitle {
+text-align: center;
+font-size: 130%;
+font-weight: bold;
+font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/* .loginIcons {
+float: left;
+width: 2%;
+height: 2%;
+} */
+
+
+.leftpic {
+text-align: center;
+width: 550px;
+height: 100%;
+
+
+}
+
+.knestylogo {
+text-align: center;
+width: 150px;
+height: 150px;
+
+
+}
+.imgcontainer {
+text-align: center;
+
+
+}
+.keepme label {
+line-height: 50px;
+
+
+}
+.button {
+color: white;
+cursor: pointer;
+background-color: rgba(182, 182, 243, 0.738);
+}
+
+#loginbtn {
+margin-right: 450px;
+
+
+}
+
+button:hover {
+opacity: 0.8;
+}
+.cancel {
+background-color: red;
+}
+.input-container {
+padding: 20px;
+width: 420px;
+height: 35px;
+}
+
+.input-container:focus {
+border: 2px solid rgba(182, 182, 243, 0.738);
+}
+.icon {
+width: 40px;
+height: 30px;
+padding: 12px;
+background-color: rgba(191, 216, 237, 0.622);
+color: black;
+text-align: center;
+}
+
+.show {
+position: absolute;
+left: 12px;
+font-size: 13px;
+color: #222;
+
+font-weight: 700;
+cursor: pointer;
+}
+.pass-key:void .show {
+display: block;
+}
+.login_form #username_error,
+.login_form #pass_error {
+margin-top: 5px;
+width: 345px;
+height: 30px;
+font-size: 18px;
+color: #c62828;
+background: rgba(255, 0, 0, 0.1);
+text-align: center;
+padding: 5px 8px;
+border-radius: 3px;
+border: 1px solid #ef9a9a;
+display: none;
+
+}
+.login_form button {
+margin: 11px 0 30px 0;
+height: 35px;
+width: 430px;
+font-size: 15px;
+color: white;
+outline: none;
+cursor: pointer;
+font-weight: bold;
+background: #1a237e;
+border-radius: 3px;
+border: 1px solid #3949ab;
+transition: 0.5s;
+bottom: 5%;
+}
+.login_form button:hover {
+background: #151c6a;
+}
+
+
+.forgotPasswordLink{
+position: absolute;
+right:2%
+}
+
+
+
+.fixedFooter {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color:#c18c5d;
+color: white;
+text-align: center;
+
+}
+
+.fixedFooterIcons{
+width:30%;
+height:5%;
+text-align:center;
+margin-left:35%;
+color:white;
+}
+
+.fixedFooterIcons a:link {
+color: rgb(255, 255, 255);
+background-color: transparent;
+text-decoration: none;
+}
+.fixedFooterIcons a:visited {
+color: #ffffff;
+background-color: transparent;
+text-decoration: none;
+}
+.fixedFooterIcons a:hover {
+color: #361e09;
+background-color: transparent;
+text-decoration: underline;
+}
+.fixedFooterIcons a:active {
+color: #f1d6be;
+background-color: transparent;
+text-decoration: underline;
+}
+
+
+.footerIcons{
+width:30%;
+height:10%;
+top: 30%;
+text-align:center;
+margin-left:35%;
+padding:5% 4%;
+color:white;
+}
+
+
+.footerIcons a:link {
+color: rgb(255, 255, 255);
+background-color: transparent;
+text-decoration: none;
+}
+.footerIcons a:visited {
+color: #ffffff;
+background-color: transparent;
+text-decoration: none;
+}
+.footerIcons a:hover {
+color: #361e09;
+background-color: transparent;
+text-decoration: underline;
+}
+.footerIcons a:active {
+color: #f1d6be;
+background-color: transparent;
+text-decoration: underline;
+}
+
+
+
+
+.footerLeft{
+position: absolute;
+width:25%;
+height:50%;
+top: 5%;
+text-align:left;
+margin-left:1%;
+padding:3% 2%;
+color:white;
+left:1%;
+}
+
+.footerRight{
+position: absolute;
+width:25%;
+height:50%;
+top: 5%;
+text-align:center;
+margin-right:1%;
+padding:3% 3%;
+color:white;
+right:1%;
+}
+
+.footerTitle{
+font-weight:bold;
+
+}
+
+.footerText{
+width:60%;
+height:25%;
+top: 65%;
+text-align:center;
+margin-left:20%;
+padding:2% 4%;
+color:white;
+font-weight:bold;
+font-size:20px;
+}
+
+
+.footerText a:link {
+color: rgb(255, 255, 255);
+background-color: transparent;
+text-decoration: none;
+}
+.footerText a:visited {
+color: #ffffff;
+background-color: transparent;
+text-decoration: none;
+}
+.footerText a:hover {
+color: #361e09;
+background-color: transparent;
+text-decoration: underline;
+}
+.footerText a:active {
+color: #f1d6be;
+background-color: transparent;
+text-decoration: underline;
+}
+
+
+
+.copyright{
+width:60%;
+height:22%;
+top: 65%;
+text-align:center;
+margin-left:20%;
+padding:2% 3%;
+color:white;
+font-size:10px;
+}
+
+
+.footer{
+position: absolute;
+bottom: -2000px;
+left: 0px;
+width: 100%;
+height: 40%;
+/* background-color: #717171; */
+background-color: #c18c5d;
+right: 0px;
+}
+
+
+
+.aboutUsFooter{
+position: absolute;
+bottom: -1150px;
+left: 0px;
+width: 100%;
+height: 40%;
+/* background-color: #717171; */
+background-color: #c18c5d;
+right: 0px;
+}
+
+.reachOutFooter{
+position: absolute;
+bottom: -650px;
+left: 0px;
+width: 100%;
+height: 40%;
+/* background-color: #717171; */
+background-color: #c18c5d;
+right: 0px;
+}
+
+.eventFooter{
+position: absolute;
+bottom: -400px;
+left: 0px;
+width: 100%;
+height: 40%;
+/* background-color: #717171; */
+background-color: #c18c5d;
+right: 0px;
+}
+
+.donationFooter{
+position: absolute;
+bottom: -600px;
+left: 0px;
+width: 100%;
+height: 40%;
+/* background-color: #717171; */
+background-color: #c18c5d;
+right: 0px;
+}
+
+.weddingFooter{
+position: absolute;
+bottom: -800px;
+left: 0px;
+width: 100%;
+height: 40%;
+/* background-color: #717171; */
+background-color: #c18c5d;
+right: 0px;
+}
+
+.competetionFooter{
+    position: absolute;
+    bottom: -800px;
+    left: 0px;
+    width: 100%;
+    height: 40%;
+    /* background-color: #717171; */
+    background-color: #c18c5d;
+    right: 0px;
+    }

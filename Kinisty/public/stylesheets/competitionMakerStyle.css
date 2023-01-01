@@ -1,0 +1,20 @@
+
+/* ////////////////////////////////////////// */
+.pageTitle{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 78px;
+}
+.rightDiv{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    top:16.8%;
+}
+.leftDiv{
+    padding-left: 4%;
+    width: 50%;
+}
+.competitionFieldSets{
+    width: 80%;
+}
